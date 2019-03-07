@@ -1,4 +1,4 @@
-package com.training.java.grpc.validator.server;
+package com.training.java.grpc.greeting.server;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;

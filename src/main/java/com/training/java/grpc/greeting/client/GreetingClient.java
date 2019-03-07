@@ -1,10 +1,10 @@
-package com.training.java.grpc.validator.client;
+package com.training.java.grpc.greeting.client;
 
 
-import com.training.java.grpc.validator.generated.entity.greeting.GreetRequest;
-import com.training.java.grpc.validator.generated.entity.greeting.GreetResponse;
-import com.training.java.grpc.validator.generated.entity.greeting.Greeting;
-import com.training.java.grpc.validator.generated.stub.greeting.GreetServiceGrpc;
+import com.training.java.grpc.greeting.generated.entity.greeting.GreetRequest;
+import com.training.java.grpc.greeting.generated.entity.greeting.GreetResponse;
+import com.training.java.grpc.greeting.generated.entity.greeting.Greeting;
+import com.training.java.grpc.greeting.generated.stub.greeting.GreetServiceGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
