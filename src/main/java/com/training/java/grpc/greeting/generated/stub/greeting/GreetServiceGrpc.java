@@ -1,4 +1,4 @@
-package com.training.java.grpc.validator.generated.stub.greeting;
+package com.training.java.grpc.greeting.generated.stub.greeting;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
@@ -6,6 +6,10 @@ import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+
+import com.training.java.grpc.greeting.generated.entity.greeting.Bienvenida;
+import com.training.java.grpc.greeting.generated.entity.greeting.GreetRequest;
+import com.training.java.grpc.greeting.generated.entity.greeting.GreetResponse;
 
 /**
  */
@@ -19,30 +23,30 @@ public final class GreetServiceGrpc {
   public static final String SERVICE_NAME = "greeting.GreetService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.training.java.grpc.validator.generated.entity.greeting.GreetRequest,
-      com.training.java.grpc.validator.generated.entity.greeting.GreetResponse> getGreetMethod;
+  private static volatile io.grpc.MethodDescriptor<GreetRequest,
+      GreetResponse> getGreetMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Greet",
-      requestType = com.training.java.grpc.validator.generated.entity.greeting.GreetRequest.class,
-      responseType = com.training.java.grpc.validator.generated.entity.greeting.GreetResponse.class,
+      requestType = GreetRequest.class,
+      responseType = GreetResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.training.java.grpc.validator.generated.entity.greeting.GreetRequest,
-      com.training.java.grpc.validator.generated.entity.greeting.GreetResponse> getGreetMethod() {
-    io.grpc.MethodDescriptor<com.training.java.grpc.validator.generated.entity.greeting.GreetRequest, com.training.java.grpc.validator.generated.entity.greeting.GreetResponse> getGreetMethod;
+  public static io.grpc.MethodDescriptor<GreetRequest,
+      GreetResponse> getGreetMethod() {
+    io.grpc.MethodDescriptor<GreetRequest, GreetResponse> getGreetMethod;
     if ((getGreetMethod = GreetServiceGrpc.getGreetMethod) == null) {
       synchronized (GreetServiceGrpc.class) {
         if ((getGreetMethod = GreetServiceGrpc.getGreetMethod) == null) {
           GreetServiceGrpc.getGreetMethod = getGreetMethod =
-              io.grpc.MethodDescriptor.<com.training.java.grpc.validator.generated.entity.greeting.GreetRequest, com.training.java.grpc.validator.generated.entity.greeting.GreetResponse>newBuilder()
+              io.grpc.MethodDescriptor.<GreetRequest, GreetResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "greeting.GreetService", "Greet"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.training.java.grpc.validator.generated.entity.greeting.GreetRequest.getDefaultInstance()))
+                  GreetRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.training.java.grpc.validator.generated.entity.greeting.GreetResponse.getDefaultInstance()))
+                  GreetResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new GreetServiceMethodDescriptorSupplier("Greet"))
                   .build();
           }
@@ -83,8 +87,8 @@ public final class GreetServiceGrpc {
      * Operacion unaria
      * </pre>
      */
-    public void greet(com.training.java.grpc.validator.generated.entity.greeting.GreetRequest request,
-        io.grpc.stub.StreamObserver<com.training.java.grpc.validator.generated.entity.greeting.GreetResponse> responseObserver) {
+    public void greet(GreetRequest request,
+        io.grpc.stub.StreamObserver<GreetResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGreetMethod(), responseObserver);
     }
 
@@ -94,8 +98,8 @@ public final class GreetServiceGrpc {
             getGreetMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.training.java.grpc.validator.generated.entity.greeting.GreetRequest,
-                com.training.java.grpc.validator.generated.entity.greeting.GreetResponse>(
+                  GreetRequest,
+                  GreetResponse>(
                   this, METHODID_GREET)))
           .build();
     }
@@ -124,8 +128,8 @@ public final class GreetServiceGrpc {
      * Operacion unaria
      * </pre>
      */
-    public void greet(com.training.java.grpc.validator.generated.entity.greeting.GreetRequest request,
-        io.grpc.stub.StreamObserver<com.training.java.grpc.validator.generated.entity.greeting.GreetResponse> responseObserver) {
+    public void greet(GreetRequest request,
+        io.grpc.stub.StreamObserver<GreetResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGreetMethod(), getCallOptions()), request, responseObserver);
     }
@@ -154,7 +158,7 @@ public final class GreetServiceGrpc {
      * Operacion unaria
      * </pre>
      */
-    public com.training.java.grpc.validator.generated.entity.greeting.GreetResponse greet(com.training.java.grpc.validator.generated.entity.greeting.GreetRequest request) {
+    public GreetResponse greet(GreetRequest request) {
       return blockingUnaryCall(
           getChannel(), getGreetMethod(), getCallOptions(), request);
     }
@@ -183,8 +187,8 @@ public final class GreetServiceGrpc {
      * Operacion unaria
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.training.java.grpc.validator.generated.entity.greeting.GreetResponse> greet(
-        com.training.java.grpc.validator.generated.entity.greeting.GreetRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<GreetResponse> greet(
+        GreetRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGreetMethod(), getCallOptions()), request);
     }
@@ -210,8 +214,8 @@ public final class GreetServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GREET:
-          serviceImpl.greet((com.training.java.grpc.validator.generated.entity.greeting.GreetRequest) request,
-              (io.grpc.stub.StreamObserver<com.training.java.grpc.validator.generated.entity.greeting.GreetResponse>) responseObserver);
+          serviceImpl.greet((GreetRequest) request,
+              (io.grpc.stub.StreamObserver<GreetResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -235,7 +239,7 @@ public final class GreetServiceGrpc {
 
     @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.training.java.grpc.validator.generated.entity.greeting.Bienvenida.getDescriptor();
+      return Bienvenida.getDescriptor();
     }
 
     @Override
