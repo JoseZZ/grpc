@@ -1,5 +1,6 @@
-package com.training.java.grpc.validator.server;
+package com.training.java.grpc.validator.server.v1;
 
+import com.training.java.grpc.validator.server.ValidatorServiceImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import java.io.IOException;
@@ -7,7 +8,7 @@ import java.io.IOException;
 /**
  * @author <a href="changeme@ext.inditex.com">Jose Gonzalez</a>
  */
-public class ValidatorServer {
+public class ValidatorServerV1 {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         System.out.println("Arrancamos el servidor");
