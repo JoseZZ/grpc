@@ -1,25 +1,26 @@
 syntax = "proto3";
 
-package address_validator;
+package validator;
 
-option java_package = "com.proto.address_validator";
+option java_package = "com.proto.validator";
 option java_multiple_files = true;
 
 
-message Greeting{
-  string first_name = 1;
-  string last_name = 2;
+message Validation{
+  string postal_code = 1;
+  string province = 2;
 }
 
-message GreetRequest{
-  Greeting greeting = 1;
+message ValidationRequest{
+  Validation request = 1;
 }
 
-message GreetResponse{
-  string result = 1;
+message ValidationResponse{
+  int32 result = 1;
+  string propuesta = 2;
 }
 
-service GreetService{
+service ValidationService{
   // Operacion unaria
-  rpc Greet(GreetRequest) returns (GreetResponse);
+  rpc Validate(ValidationRequest) returns (ValidationResponse);
 }
